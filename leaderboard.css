@@ -1,0 +1,60 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+.leaderboard-container {
+    width: 50%;
+}
+.leaderboard {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+}
+.leaderboard table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.leaderboard th, .leaderboard td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.leaderboard th {
+    background-color: #f7f7f7;
+}
+.crossing tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+.leaderboard tr:hover {
+    background-color: #f1f1f1;
+}
+.leaderboard td.rank {
+    width: 50px;
+    text-align: center;
+}
+/* Styles for ranks */
+.master {
+    background: linear-gradient(to right, pink, violet, cyan);
+}
+.ruby {
+    background-color: #ffbdd6;
+}
+.diamond {
+    background-color: #ade4ff;
+}
+.platinum {
+    background-color: #bcffec;
+}
+.gold {
+    background-color: #eee196;
+}
