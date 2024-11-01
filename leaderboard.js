@@ -82,7 +82,7 @@ async function loadLeaderboard() {
     const url = `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${LEADERBOARD_RANGE}?key=${API_KEY}`;
     const response = await fetch(url);
     const data = await response.json(); // data.values = 2차원 배열
-    if(data.values.length > 0){
+    if(data.values){
         const ret = data.values.map(row => ({ name: row[0], score: row[1]}));
         return ret;
     }
@@ -95,7 +95,7 @@ async function loadRunning() {
     const url = `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${RUNNING_RANGE}?key=${API_KEY}`;
     const response = await fetch(url);
     const data = await response.json(); // data.values = 2차원 배열
-    if(data.values.length > 0){
+    if(data.values){
         const ret = data.values[0].map(name => ({ name: name }));
         return ret;
     }
@@ -108,7 +108,7 @@ async function loadQueue() {
     const url = `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${QUEUE_RANGE}?key=${API_KEY}`;
     const response = await fetch(url);
     const data = await response.json(); // data.values = 2차원 배열
-    if(data.values.length > 0){
+    if(data.values){
         const ret = data.values.map(row => ({ name: row[0] }));
         return ret;
     }
