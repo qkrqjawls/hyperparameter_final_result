@@ -83,6 +83,10 @@ async function fetchData() {
     if(window.innerWidth >= 1000) {
         const container = document.getElementById('only-container');
         container.style.display = 'flex';
+        const ccs = document.querySelectorAll('.cc');
+        ccs.forEach(item => {
+            item.style.width = '50%';
+        })
     }
     const leaderboard_data = await loadLeaderboard('result!A1:B');  // Wait for loadData to resolve
     populateLeaderboard(leaderboard_data);      // Populate leaderboard after data is fetched
