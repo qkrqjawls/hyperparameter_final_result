@@ -7,51 +7,40 @@
     <link rel="stylesheet" href="leaderboard.css" />
 </head>
 <body>
-    <div class="leaderboard-container">
-        <h1>LeaderBoard</h1>
-        <div class="leaderboard">
-            <table>
-                <thead>
-                    <tr>
-                        <th class="rank">#</th>
-                        <th>No. Name</th>
-                        <th>Val_Accuracy</th>
-                    </tr>
-                </thead>
-                <tbody id="leaderboard-body">
-                    <!-- Data will be inserted here via JavaScript -->
-                </tbody>
-            </table>
+    <div class="leaderboard-container" id="only-container">
+        <div style="display: block;left:0; width:50%;">
+            <h1>운영위원 제외</h1>
+            <div class="leaderboard">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="rank">#</th>
+                            <th>No. Name</th>
+                            <th>Val_Accuracy</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboard-body">
+                        <!-- Data will be inserted here via JavaScript -->
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
-    <div class="leaderboard-container">
-        <h1>Running</h1>
-        <div class="leaderboard crossing">
-            <table>
-                <thead>
-                    <tr>
-                        <th class="rank">computer</th>
-                        <th>state</th>
-                    </tr>
-                </thead>
-                <tbody id="running-body">
-                    <!-- Data will be inserted here via JavaScript -->
-                </tbody>
-            </table>
-        </div>
-        <h1>Waiting</h1>
-        <div class="leaderboard crossing">
-            <table>
-                <thead>
-                    <tr>
-                        <th class="rank">#</th>
-                        <th>No. Name</th>
-                    </tr>
-                </thead>
-                <tbody id="queue-body">
-                    <!-- Data will be inserted here via JavaScript -->
-                </tbody>
-            </table>
+        <div style="display: block; right:0; width:50%">
+        <h1>전체</h1>
+            <div class="leaderboard">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="rank">#</th>
+                            <th>No. Name</th>
+                            <th>Val_Accuracy</th>
+                        </tr>
+                    </thead>
+                    <tbody id="total-body">
+                        <!-- Data will be inserted here via JavaScript -->
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
     
